@@ -56,7 +56,7 @@ require '../../modelos/Cliente.php';
         <tr>
             <td><strong>FECHA:</strong></td>
             <?php foreach ($factura as $key => $venta) : ?>
-                <td><?= $venta['VENTA_FECHA'] ?></td>
+                <td><?= date('d/m/Y', strtotime($venta['VENTA_FECHA']))?></td>
             <?php endforeach ?>
         </tr>
         <tr>
